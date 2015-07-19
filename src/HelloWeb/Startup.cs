@@ -7,9 +7,9 @@ namespace HelloWeb
     {
         public void Configure(IApplicationBuilder app, ILoggerFactory loggerFactory)
         {
-            loggerFactory.AddConsole()
+            loggerFactory.AddConsole();
             app.UseStaticFiles();
             app.UseWelcomePage();
-        
+        }
     }
 }
