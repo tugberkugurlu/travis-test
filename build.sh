@@ -1,6 +1,6 @@
 #!/bin/bash
-solutionDir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-echo "solution dir: $solutionDir"
+scriptsDir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+echo "solution dir: $scriptsDir"
 echo "build started out..."
 echo "looking for all params now..."
 allParams=$@
