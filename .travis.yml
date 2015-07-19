@@ -9,6 +9,7 @@ before_script:
   - export TRAVIS_BUILD_NUMBER="0.1.0-beta.1.$TRAVIS_BUILD_NUMBER"
   - mono --version
   - dnu --version
+  - bash -c "source ~/.dnx/dnvm/dnvm.sh"
   - dnvm list
 script:
   - ./build.sh --buildNumber=$TRAVIS_BUILD_NUMBER --configuration=RELEASE --outputBasePath=./artifacts --pack
