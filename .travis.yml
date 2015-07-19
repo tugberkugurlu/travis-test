@@ -1,5 +1,7 @@
+language: csharp
 before_script:
   - chmod u+x build.sh
   - export TRAVIS_BUILD_NUMBER="0.1.0-beta.1.$TRAVIS_BUILD_NUMBER"
+  - mono --version
 script:
   - ./build.sh --buildNumber=$TRAVIS_BUILD_NUMBER --configuration=RELEASE --outputBasePath=./artifacts --pack
