@@ -1,6 +1,11 @@
 #!/bin/bash
+
+configuration=RELEASE
 scriptsDir=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-artifactsDir="${scriptsDir%%/}/artifacts"
+artifactsDir=${scriptsDir%%/}/artifacts
+projectDirectory=${scriptsDir%%/}/src/HelloWeb
+projectFilePath=${projectDirectory%%/}/project.json
+
 echo "scripts dir: $scriptsDir"
 echo "artifacts dir: $artifactsDir"
 echo "build started out..."
@@ -10,3 +15,6 @@ for param in $allParams
 do
   echo "$param is in progress..."
 done
+
+dnu restore $projectDirectory
+dnu build $projectFilePath --configuration $configuration --out $artifactsDir
