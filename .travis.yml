@@ -1,4 +1,4 @@
 before_script:
   - chmod u+x build.sh
 script:
-  - ./build.sh $TRAVIS_BUILD_NUMBER
+  - ./build.sh --buildNumber=$TRAVIS_BUILD_NUMBER --configuration=RELEASE --outputBasePath=./artifacts --pack
