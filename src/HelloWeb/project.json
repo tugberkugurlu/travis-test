@@ -4,8 +4,7 @@
     "exclude": [
         "wwwroot"
     ],
-    "packExclude": [
-        "**.xproj",
+    "publishExclude": [
         "**.user",
         "**.vspscc"
     ],
