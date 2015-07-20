@@ -19,4 +19,4 @@ done
 
 dnu restore $projectDirectory
 dnu build $projectFilePath --configuration $configuration --out $artifactsDir
-dnu pack $projectDirectory --configuration $configuration --out $outputDir
+dnu publish $projectDirectory --configuration $configuration --out $outputDir --runtime active
