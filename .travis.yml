@@ -13,5 +13,6 @@ script:
   - ./build.sh --buildNumber=$TRAVIS_BUILD_NUMBER --configuration=RELEASE --outputBasePath=./artifacts --pack
 addons:
   artifacts: true
+    # ...
     paths:
       - ./artifacts
